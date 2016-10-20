@@ -33,9 +33,9 @@ song_node *searchFor(char *name, char *artist, song_node *arr[]){
   return findSong(name,artist,arr[letter-97]);
 }
 
-void printListLetter(char *letter, song_node *arr[]){
-  int letterInt = toLower((int)(letter[0]));
-  print_list(arr[letterInt-97]);
+void printListLetter(char letter, song_node *arr[]){
+  char letterLower = (char)toLower((int)(letter));
+  print_list(arr[letterLower-97]);
 }
 
 void printListArtist(char *artist, song_node *arr[]){
@@ -56,6 +56,8 @@ song_node *shuffleList(song_node *arr[], int n){
   start = 0;
   while(n){
     int arrInd = rand() % 26;
+    printf("\n\n::DIAG:: shuffle list entered\n\n");
+    printf("rand index: %d",arrInd);
     song_node *tempNode = findRand(arr[arrInd]);
     char *nameTemp = tempNode->name;
     char *artTemp = tempNode->artist;

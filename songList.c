@@ -94,9 +94,11 @@ song_node *findArtistAll(char *search, song_node *start){
 // How do I make random truly random
 song_node *findRand(song_node *start){
   int n = rand() % 30;
+  printf("random: %d",n);
   song_node *temp = start;
   while(n){
     temp = temp->next;
+    printf("\n\n::DIAG:: rand entered\n\n");
     n--;
     if(!temp){
       temp = start;

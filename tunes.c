@@ -13,13 +13,15 @@ void main(){
 
   song_node *table[26];
   init(table,26);
-  printf("name of added song: %s - %s\n",addNewSong("testNameA","AtestArt",table)->name,"AtestArt");
-  printf("name of added song: %s - %s\n",addNewSong("testNameB","AtestArt",table)->name,"AtestArt");
+  printf("name of added song: %s - %s\n",addNewSong("testNameA","A",table)->name,"A");
+  printf("name of added song: %s - %s\n",addNewSong("testNameB","A",table)->name,"A");
+  printf("name of added song: %s - %s\n",addNewSong("testNameC","AB",table)->name,"AB");
+  printf("name of added song: %s - %s\n",addNewSong("testNameD","AB",table)->name,"AB");
   printf("name of added song: %s - %s\n",addNewSong("testNameA","BtestArt",table)->name,"BtestArt");
-  //print_list(table[0]);
+  printf("\n");
   printLibrary(table);
-  printf("\nfinding testNameA: BtestArt\n");
-  printf("--> %s\n",searchFor("testNameA","BtestArt",table)->name);
+  printf("\nprinting shuffleList\n");
+  print_list(shuffleList(table,2));
 
   /* song_node *one = (song_node*)malloc(sizeof(song_node)); */
   /* one = NULL; */
