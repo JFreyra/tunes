@@ -1,10 +1,12 @@
 #include "songList.h"
 
+#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
+
 // issues with print_list from printLibrary: cannot print empty library
 void print_list(song_node *iter){
   while(iter){
-    if(!iter) break;
-    printf("\nentered for some reason\n");
     printf("%s: %s\n",iter->artist,iter->name);
     iter = iter->next;
   }
@@ -23,6 +25,7 @@ song_node *insert_alpha(char *newName, char *newArtist, song_node *start){
   strcpy(newInsert->name,newName);
   strcpy(newInsert->artist,newArtist);
   if(!start){
+    printf("\n\n::DIAG:: entered\n\n");
     return newInsert;
   }
   while(start->next){
