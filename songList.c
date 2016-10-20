@@ -92,6 +92,7 @@ song_node *findArtistAll(char *search, song_node *start){
 }
 
 // How do I make random truly random
+// ***** CANT HANDLE EMPTY LISTS: CAUSING SEG FAULT ****
 song_node *findRand(song_node *start){
   int n = rand() % 30;
   printf("random: %d",n);

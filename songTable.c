@@ -58,7 +58,7 @@ song_node *shuffleList(song_node *arr[], int n){
     int arrInd = rand() % 26;
     printf("\n\n::DIAG:: shuffle list entered\n\n");
     printf("rand index: %d",arrInd);
-    song_node *tempNode = findRand(arr[arrInd]);
+    song_node *tempNode = findRand(arr[arrInd]); // attempts to search empty list
     char *nameTemp = tempNode->name;
     char *artTemp = tempNode->artist;
     start = insert_front(nameTemp,artTemp,start);
