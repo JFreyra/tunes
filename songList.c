@@ -97,7 +97,7 @@ song_node *findRand(song_node *start){
   int n = rand() % 30;
   printf("random: %d",n);
   song_node *temp = start;
-  while(n){
+  while(n && temp){
     temp = temp->next;
     printf("\n\n::DIAG:: rand entered\n\n");
     n--;
