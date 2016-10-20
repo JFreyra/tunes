@@ -25,7 +25,6 @@ song_node *insert_alpha(char *newName, char *newArtist, song_node *start){
   strcpy(newInsert->name,newName);
   strcpy(newInsert->artist,newArtist);
   if(!start){
-    printf("\n\n::DIAG:: entered\n\n");
     return newInsert;
   }
   while(start->next){

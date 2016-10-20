@@ -29,15 +29,18 @@ song_node *addNewSong(char *name, char *artist, song_node *arr[]){
 }
 
 song_node *searchFor(char *name, char *artist, song_node *arr[]){
-  return findSong(name,artist,arr[artist[0]-97]);
+  int letter = toLower((int)(artist[0]));
+  return findSong(name,artist,arr[letter-97]);
 }
 
 void printListLetter(char *letter, song_node *arr[]){
-  print_list(arr[letter[0]-97]);
+  int letterInt = toLower((int)(letter[0]));
+  print_list(arr[letterInt-97]);
 }
 
 void printListArtist(char *artist, song_node *arr[]){
-  print_list(findArtistAll(artist,arr[artist[0]-97]));
+  int letter = toLower((int)(artist[0]));
+  print_list(findArtistAll(artist,arr[letter-97]));
 }
 
 void printLibrary(song_node *arr[]){
@@ -63,7 +66,8 @@ song_node *shuffleList(song_node *arr[], int n){
 }
 
 void deleteSong(char *name, char *artist, song_node *arr[]){
-  deleteNode(name,artist,arr[artist[0]-97]);
+  int letter = toLower((int)(artist[0]));
+  deleteNode(name,artist,arr[letter-97]);
 }
 
 void deleteAll(song_node *arr[]){
