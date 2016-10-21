@@ -16,6 +16,6 @@ song_node *findSong(char *nameTest, char *artTest, song_node *start);
 song_node *findArtistFirst(char *search, song_node *start);
 song_node *findArtistAll(char *search, song_node *start);
 song_node *findRand(song_node *start);
-int deleteNode(char *name, char *artist, song_node *start);
+song_node *deleteNode(char *name, char *artist, song_node *start);
 
 #endif
